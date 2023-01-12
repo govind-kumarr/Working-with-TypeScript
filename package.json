@@ -1,0 +1,25 @@
+{
+  "name": "working-with-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "lite-server": "^2.6.1",
+    "typescript": "^4.9.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/govind-kumarr/Working-with-TypeScript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/govind-kumarr/Working-with-TypeScript/issues"
+  },
+  "homepage": "https://github.com/govind-kumarr/Working-with-TypeScript#readme"
+}
