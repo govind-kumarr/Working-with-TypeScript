@@ -7,3 +7,7 @@ string "Hi" 'Hi' `Hi`
 boolean true and false
 
 object {age: 30} any javascript object
+
+tuple [1,2]
+
+Enum enum{NEW, OLD}
