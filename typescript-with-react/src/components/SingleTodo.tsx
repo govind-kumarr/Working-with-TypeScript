@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Todo } from "../model";
 
 //!importing styles
@@ -14,6 +14,9 @@ interface Props {
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }: Props) => {
+  const [edit, setEdit] = useState<boolean>(false);
+  const [edit_todo, setEdit_todo] = useState<string>(todo.todo);
+
   //!Add Function
   const handleDone = (id: number) => {
     setTodos(
@@ -29,14 +32,23 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }: Props) => {
   };
   return (
     <form className="todos_single">
-      {todo.isDone ? (
+      {edit ? (
+        <input type="text" />
+      ) : todo.isDone ? (
         <s className="todo_single_text">{todo.todo}</s>
       ) : (
         <span className="todo_single_text">{todo.todo}</span>
       )}
 
       <div>
-        <span className="icon">
+        <span
+          className="icon"
+          onClick={() => {
+            if (!edit && !todo.isDone) {
+              setEdit(!edit);
+            }
+          }}
+        >
           <AiFillEdit />
         </span>
         <span className="icon" onClick={() => handleDelete(todo.id)}>
