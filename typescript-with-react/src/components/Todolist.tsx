@@ -2,6 +2,7 @@ import React from "react";
 import { Todo } from "../model";
 import SingleTodo from "./SingleTodo";
 import "./styles.css";
+import { MdDone } from "react-icons/md";
 
 interface Props {
   todos: Todo[];
